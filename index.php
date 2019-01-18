@@ -163,7 +163,7 @@ $profile = $profile->fetchAll();
             $name =htmlspecialchars( $_POST['name']);
             $time = date("H:i:s");
             $connection->query("INSERT INTO `comment` (`commentary1`,`name`,`date`) VALUES ('$comment','$name','$time')");
-//            header('Location: index1.php');
+            header('Location: index1.php');
         }
         $commentOfUser = $connection->query('SELECT * FROM `comment`');
         foreach ($commentOfUser as $comments) {
